@@ -13,13 +13,14 @@ const ThumbNail = ({ result }) => {
                 src={
                     `${BASE_URL}${result.backdrop_path || result.poster_path}` ||
                     `${BASE_URL}${result.poster_path}`}
-                width={1080}
-                height={1920}
+                width={100}
+                height={100}
+                
             />
             <div className='p-2'>
                 <p className='truncate max-w-md'>{result.overview}</p>
 
-                <h1 className='mt-2 text-2xl transition duration-100 ease-in-out group-hover:font-bold'>{result.title || result.original_name}</h1>
+                <h1 className='mt-2 text-xl transition duration-100 ease-in-out group-hover:font-bold'>{result.title || result.original_name}</h1>
 
                 {/* ?if mediatype is given */}
                 <p className='flex items-center opacity-40 group-hover:opacity-100'>{result.media_type && `${result.media_type} `}  _  {" "}
